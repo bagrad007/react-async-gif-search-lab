@@ -4,6 +4,7 @@ import GifSearch from '../components/GifSearch'
 
 export default class GifListContainer extends Component {
     constructor() {
+        super()
         this.state = {
             gifs: []
         }
