@@ -8,8 +8,8 @@ import NavBar from './NavBar'
 const App = () => {
   return (
     <div>
-      <GifListContainer />
       < NavBar color='black' title="Giphy Search" />
+      <GifListContainer />
     </div>
   )
 }
