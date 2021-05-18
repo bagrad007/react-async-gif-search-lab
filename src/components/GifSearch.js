@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 
 export default class GifSearch extends Component {
-    state = {
-        query: ""
+    constructor() {
+        super()
+        this.state = {
+            query: ""
+        }
     }
 
-    handleSubmit = event => {
-        event.preventDefault()
+    handleSubmit(e) {
+        e.preventDefault()
+        debugger
         this.props.fetchGIFs(this.state.query)
     }
 
@@ -14,7 +18,12 @@ export default class GifSearch extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state.query} onChange={event => this.setState({ query: event.target.value })} />
+                    <input type="text" value={this.state.query} onChange={event => {
+                        this.setState({
+
+                            query: event.target.value
+                        })
+                    }} />
                 </form>
             </div>
         )
